@@ -49,7 +49,8 @@ ros2 service call <service> <srv> "<args>"
 ### Msg/Srv
 
 ```shell
-ros2 interface show <msg>/<srv>/<action>
+ros2 interface show <msg>/<srv>/<action>	# 查看定义
+ros2 interface proto <msg>/<srv>/<action>	# 查看原型，可用于.idl文件
 ros2 interface package <pkg>	# 查看功能包中用到的所有接口
 ```
 
