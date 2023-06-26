@@ -16,6 +16,8 @@ ros2 pkg create --build-type ament_python <pkg>	# python
 cd dev_ws
 source install/local_setup.sh
 colcon build [--packages-select <pkg>]
+# cd
+colcon_cd <pkg>
 ```
 
 ### Node
