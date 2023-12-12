@@ -105,5 +105,6 @@ class SelfNode(CompatibleNode):
 
 ==注意==：
 
-* 删除功能包后AMENT_PREFIX_PATH和CMAKE_PREFIX_PATH由于环境变量未更新会产生warning，新开一个终端重新编译即可。
-* 一个功能包只能用cmake/python，因此自定义消息最好额外放在其他功能包中，以便共用。
+* 删除功能包后AMENT_PREFIX_PATH和CMAKE_PREFIX_PATH由于环境变量未更新会产生warning，刷新环境变量重新编译即可。
+* 如果要Cpp和Python混合编程，参考[ament_cmake_python](https://docs.ros.org/en/rolling/How-To-Guides/Ament-CMake-Python-Documentation.html)。
+* 如果colcon编译遇到报错`ERROR:colcon.colcon_core.extension_point:Entry point 'colcon_core.prefix_path.catkin' is declared multiple times, 'colcon_ros.prefix_path.catkin:CmakePrefixPath' overwriting 'colcon_ros.prefix_path.catkin:CmakePrefixPath'`，找到该文件注释报错信息`/usr/lib/python3/dist-packages/colcon_core/extension_point.py`。
